@@ -1,0 +1,80 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing:border-box ;
+}
+body{
+    background-color: rgb(185, 185, 185);
+}
+img{
+    border-radius: 50%;
+    float:left;
+    margin: 3% ;
+}
+
+h2{
+    font-size: 27px;
+    font-weight: 50;
+    letter-spacing: 0.01rem;
+    line-height: 5px;
+    
+}
+h3{
+    line-height: 5px;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 0.1rem;
+    margin-bottom: 7%;
+
+}
+h4{
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing:0.1rem;
+}
+.white {
+    color: rgb(56, 56, 56);
+    background-color: rgb(236, 232, 232);
+
+}
+.dark {
+    color:rgb(212, 212, 212);
+}
+
+
+#myGrid{
+    display: grid;
+    width: 90%;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "dan dan jona kira"
+                        "jean pat pat kira";
+    gap: 3%;
+    }
+.card{
+    border-radius: 20px;
+    padding:4% 2%;
+    
+}
+
+#jeanette{
+    grid-area: jean;
+}
+#kira{
+    grid-area:kira;
+}
+#daniel{
+    grid-area: dan;
+background-color: rgb(97, 50, 141);
+}
+#johnatan{
+    grid-area: jona;
+background-color: rgb(45, 44, 51);
+}
+
+#patric{
+    grid-area: pat;
+    background-color: rgb(21, 21, 22);
+
+}
+
