@@ -1,9 +1,19 @@
 *{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Tahoma, sans-serif;
     box-sizing:border-box ;
 }
 body{
-    background-color: rgb(185, 185, 185);
+    background-color: rgb(230, 228, 228);
+}
+svg {
+position: absolute;
+    opacity: 0.8;
+    z-index: 1;
+    margin: auto auto auto 30%;
+}
+.text-layer{
+    position: relative;
+    z-index: 10;
 }
 img{
     border-radius: 50%;
@@ -12,28 +22,33 @@ img{
 }
 
 h2{
-    font-size: 27px;
+    font-size: 20px;
     font-weight: 50;
     letter-spacing: 0.01rem;
-    line-height: 5px;
+    line-height: 0px;
     
 }
 h3{
     line-height: 5px;
-    font-size: 13px;
+    font-size: 10px;
     font-weight: lighter;
     letter-spacing: 0.1rem;
     margin-bottom: 7%;
+    
 
 }
 h4{
-    font-size: 20px;
-    font-weight: bolder;
+    font-size: 15px;
+    font-weight: bold;
     letter-spacing:0.1rem;
+    
+}
+p{
+    font-size: 14px;
 }
 .white {
     color: rgb(56, 56, 56);
-    background-color: rgb(236, 232, 232);
+    background-color: rgb(250, 247, 247);
 
 }
 .dark {
@@ -42,34 +57,50 @@ h4{
 
 
 #myGrid{
+    
     display: grid;
     width: 90%;
-    
+    margin:3% auto;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "dan dan jona kira"
                         "jean pat pat kira";
-    gap: 3%;
+    gap: 2%;
     }
 .card{
-    border-radius: 20px;
-    padding:4% 2%;
-    
+    border-radius: 15px;
+    padding:5% 4%;
+    -webkit-box-shadow: 8px 2px 22px 0px rgba(0,0,0,0.36); 
+box-shadow: 8px 2px 22px 0px rgba(0,0,0,0.36);
+z-index:0;
 }
 
 #jeanette{
     grid-area: jean;
 }
+#jeanette img {
+    outline: white solid 2px;
+}
 #kira{
     grid-area:kira;
 }
+#kira img {
+    outline: white solid 2px;
+}
 #daniel{
+
     grid-area: dan;
 background-color: rgb(97, 50, 141);
+}
+#daniel img{
+    outline: 2px solid rgb(123, 73, 170);
 }
 #johnatan{
     grid-area: jona;
 background-color: rgb(45, 44, 51);
+}
+#johnatan img {
+    outline: 2px solid white;
 }
 
 #patric{
@@ -77,4 +108,66 @@ background-color: rgb(45, 44, 51);
     background-color: rgb(21, 21, 22);
 
 }
+#patric img{
+    outline: 2px solid rgb(97, 50, 141);
+}
+/*MEDIA QUERRIES*/
+/*small screen*/
+@media(max-width: 1186px) {
+    #myGrid{
+    
+        display: grid;
+        width: 90%;
+        margin:3% auto;
+        grid-template-columns: 1fr 1fr 1fr  ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "dan dan jona "
+                            "jean pat pat "
+                            "kira kira kira";
+        gap: 2%;
+        }
+        svg {
+            position: absolute;
+                opacity: 0.8;
+                z-index: 1;
+                margin: auto auto auto 40%;
+            }
 
+    
+    
+}
+/*Tablet*/
+@media(max-width: 880px)
+{
+    #myGrid{
+    
+    display: grid;
+    width: 90%;
+    margin:3% auto;
+    grid-template-columns: 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "dan dan "
+                        "jean jona"
+                        "pat pat "
+                        "kira kira";
+    gap: 2%;
+    }
+
+} 
+/*phone*/
+@media(max-width: 880px){
+    #myGrid{
+    
+        display: grid;
+        width: 90%;
+        margin:3% auto;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "dan"
+                            "jean" 
+                            "jona"
+                            "pat"
+                            "kira";
+        gap: 1%;
+        }
+}
